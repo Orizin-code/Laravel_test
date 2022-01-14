@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Post;  //Postモデルを使う
 use Illuminate\Support\Facades\Auth;  //ログイン機能を使う
+use App\Http\Requests\PostRequest;
 
 class PostController extends Controller
 {
@@ -25,7 +26,7 @@ class PostController extends Controller
     }
 
     // 登録（投稿）処理
-    public function store(Request $request)
+    public function store(PostRequest $request)
     {
         // Postモデルのインスタンスを生成
         $post = new Post;
