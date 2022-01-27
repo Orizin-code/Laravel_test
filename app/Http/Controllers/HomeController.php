@@ -23,6 +23,17 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $cart_list = [
+            'cart_item1' => [
+                'product' => 'ノート',
+                'quantity' => '2'
+            ],
+            'cart_item2' => [
+                'product' => 'ボールペン',
+                'quantity' => '3'
+            ],
+        ];
+
+        dd($cart_list);
     }
 }
